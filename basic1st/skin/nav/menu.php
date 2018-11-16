@@ -2,7 +2,13 @@
             nav>ul{width:100%;height:40px;}
             nav>ul>li{float:left;width:200px;}
         </style>
-        <nav>
+        
+        <div class="sns">
+           <a href="https://www.facebook.com/ATWOSOMEPLACE"> <img src="<? echo G5_THEME_IMG_URL ?>/two/fb.gif" alt="gif"></a>
+            <a href="https://www.instagram.com/atwosomeplace_official/"><img src="<? echo G5_THEME_IMG_URL ?>/two/ins.png" alt="ins"></a>
+        </div>
+
+        <nav class="nav">
            <ul>
         <?php
                 $sql = " select *
@@ -45,7 +51,7 @@
                         if($k == 0)
                             echo '<ul>'.PHP_EOL;
                     ?>
-                        <li><a href="<?php echo $row2['me_link']; ?>" target="_<?php echo $row2['me_target']; ?>"><?php echo $row2['me_name'] ?></a></li>
+                        <li><a style="display: none" href="<?php echo $row2['me_link']; ?>" target="_<?php echo $row2['me_target']; ?>"><?php echo $row2['me_name'] ?></a></li>
                     <?php
                     $k++;
                     }   //end foreach $row2
@@ -65,3 +71,4 @@
 
          </ul>
         </nav>
+        

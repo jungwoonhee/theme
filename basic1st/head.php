@@ -15,31 +15,47 @@ include_once(G5_LIB_PATH.'/connect.lib.php');
 include_once(G5_LIB_PATH.'/popular.lib.php');
 ?>
 <style>
-    #header_wrap{width:1200px;margin:20px auto;}
+    #header_wrap{width:1200px;margin:0px auto;position: relative;height: 160px;}
+
+    .header_bg{background: url(<? echo G5_THEME_IMG_URL ?>/two/bg.gif);height: 150px;}
+    .gnb{position: absolute;top: 0;right: 0;color: #d1d1d1;}
+    .gnb:after{content: "";display: block;clear: both}
+    .gnb li{float: left;padding: 10px;font-size: 12px}
+
+    .nav {background: url(<? echo G5_THEME_IMG_URL ?>/two/box.png) no-repeat;height: 100px;width: 760px;float: right;margin-top: 40px;color: #d1d1d1;font-size: 18px;font-weight: bold;}
+    .nav ul{line-height: 110px;margin-left: 20px;margin-right: 20px;}
+    .nav li{width: 144px;text-align: center;}
+
+    .sns{width: 115px;float: right;margin-top: 75px;}
+
 </style>
-<header id="header_wrap">
-
-         <a href="<?php echo G5_URL ?>">회사명</a>
-
-        <ul >
-<?php if ($is_member) {  ?>
-
-
-            <li><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=<?php echo G5_BBS_URL ?>/register_form.php"><i class="fa fa-cog" aria-hidden="true"></i> 정보수정</a></li>
-            <li><a href="<?php echo G5_BBS_URL ?>/logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> 로그아웃</a></li>
-            <?php if ($is_admin) {  ?>
-            <li class="tnb_admin"><a href="<?php echo G5_ADMIN_URL ?>"><b><i class="fa fa-user-circle" aria-hidden="true"></i> 관리자</b></a></li>
-            <?php }  ?>
-            <?php } else {  ?>
-            <li><a href="<?php echo G5_BBS_URL ?>/register.php"><i class="fa fa-user-plus" aria-hidden="true"></i> 회원가입</a></li>
-            <li><a href="<?php echo G5_BBS_URL ?>/login.php"><b><i class="fa fa-sign-in" aria-hidden="true"></i> 로그인</b></a></li>
-            <?php }  ?>
-        </ul>
-         <?php  include(G5_THEME_PATH.'/skin/nav/menu.php'); ?> 
-           
+<div class="header_bg">
+    <header id="header_wrap">
+    
+            <a href="<?php echo G5_URL ?>"><img src="<?echo G5_THEME_IMG_URL?>/two/logo.png" alt="logo"></a>
+             
+    
+            <ul class="gnb">
+    <?php if ($is_member) {  ?>
+    
+    
+                <li><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=<?php echo G5_BBS_URL ?>/register_form.php"><i class="fa fa-cog" aria-hidden="true"></i> 정보수정</a></li>
+                <li><a href="<?php echo G5_BBS_URL ?>/logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> 로그아웃</a></li>
+                <?php if ($is_admin) {  ?>
+                <li class="tnb_admin"><a href="<?php echo G5_ADMIN_URL ?>"><b><i class="fa fa-user-circle" aria-hidden="true"></i> 관리자</b></a></li>
+                <?php }  ?>
+                <?php } else {  ?>
+                <li><a href="<?php echo G5_BBS_URL ?>/register.php"> 회원가입</a></li>
+                <li><a href="<?php echo G5_BBS_URL ?>/login.php"><b> 로그인</b></a></li>
+                <?php }  ?>
+                <li>고객센터</li>
+            </ul>
+             <?php  include(G5_THEME_PATH.'/skin/nav/menu.php'); ?> 
+               
+                
             
-        
-</header>
+    </header>
+</div>
 
 <?php    if(defined('_INDEX_')) {     // index에서만 실행?>
 
