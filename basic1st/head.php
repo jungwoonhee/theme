@@ -17,7 +17,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 <style>
     #header_wrap{width:1200px;margin:0px auto;position: relative;height: 160px;}
 
-    .header_bg{background: url(<? echo G5_THEME_IMG_URL ?>/two/bg.gif);height: 150px;}
+    .header_bg{background: url(<? echo G5_THEME_IMG_URL ?>/two/bg.gif);height: 150px;width: 100%;}
     .gnb{position: absolute;top: 0;right: 0;color: #d1d1d1;}
     .gnb:after{content: "";display: block;clear: both}
     .gnb li{float: left;padding: 10px;font-size: 12px}
@@ -27,6 +27,10 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
     .nav li{width: 144px;text-align: center;}
 
     .sns{width: 115px;float: right;margin-top: 75px;}
+
+    .side_one{position: fixed;z-index: 10;right: 50px;top: 165px;}
+    .side_two{position: fixed;z-index: 10;right: 50px;top: 278px;background: url(<? echo G5_THEME_IMG_URL ?>/two/side2.png);width: 146px;height: 97px;}
+    .side_two a{line-height: 120px;padding-left: 12px;}
 
 </style>
 <div class="header_bg">
