@@ -17,7 +17,8 @@
 #firstheader{width:100%;height:100px;background:skyblue;}
 #recomm_book{width:100%;height:200px;background:pink;}
 div#content{width:1200px;margin:0 auto;}
-#realfooter{width:100%;height:200px;background:gray;}
+#realfooter{width:100%;height:130px;background:#2c2a29;}
+.footer{width: 1200px;margin: 0 auto;color: #a1a1a1}
 
 
 /* 중간 레이아웃 */

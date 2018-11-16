@@ -22,7 +22,9 @@
 <hr>
 
 <footer id="realfooter">
-footer 
+	<div class="footer">
+		
+	</div>
 </footer>
 
 <?php
