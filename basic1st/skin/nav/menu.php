@@ -4,7 +4,7 @@
             .sub_menu{font-size: 14px;background: rgba(44,42,41,0.95);margin-top: -10px;width: 140px;box-shadow: 2px 2px 5px black;z-index: 5;position: absolute;border-radius: 5px}
             .sub_menu li{color: #e2dfd8}
             .sub_menu a{display: block;line-height: 50px;}
-            .sub_menu a:hover{color: #ffffff;}
+            .sub_menu a:hover{color: #ecd56d;}
         </style>
         
         <script>
