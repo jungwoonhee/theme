@@ -1,8 +1,24 @@
 ﻿        <style>
-            nav>ul{width:100%;height:40px;}
-            nav>ul>li{float:left;width:200px;}
+            nav>ul>li{float:left;_width:200px;}
+            nav>ul>li:hover{color: #ffffff}
+            .sub_menu{font-size: 14px;background: rgba(54,57,58);margin-top: -10px;width: 140px;box-shadow: 2px 2px 5px black;z-index: 5;position: absolute;}
+            .sub_menu li{color: #ebebeb}
+            .sub_menu a{display: block;line-height: 50px;}
+            .sub_menu a:hover{color: #ffffff}
         </style>
         
+        <script>
+            $(function(){
+                $(".sub_menu").hide();
+                $(".nav>ul>li").hover(function(){
+                    var k=$(this).index();
+                    $(".sub_menu").eq(k).stop().slideDown();
+                },function(){
+                    $(".sub_menu").hide();
+                })
+            })
+        </script>
+
         <div class="sns">
            <a href="https://www.facebook.com/ATWOSOMEPLACE"> <img src="<? echo G5_THEME_IMG_URL ?>/two/fb.gif" alt="gif"></a>
             <a href="https://www.instagram.com/atwosomeplace_official/"><img src="<? echo G5_THEME_IMG_URL ?>/two/ins.png" alt="ins"></a>
@@ -49,9 +65,9 @@
                         if( empty($row2) ) continue; 
 
                         if($k == 0)
-                            echo '<ul>'.PHP_EOL;
+                            echo '<ul class="sub_menu">'.PHP_EOL;
                     ?>
-                        <li><a style="display: none" href="<?php echo $row2['me_link']; ?>" target="_<?php echo $row2['me_target']; ?>"><?php echo $row2['me_name'] ?></a></li>
+                        <li><a href="<?php echo $row2['me_link']; ?>" target="_<?php echo $row2['me_target']; ?>"><?php echo $row2['me_name'] ?></a></li>
                     <?php
                     $k++;
                     }   //end foreach $row2

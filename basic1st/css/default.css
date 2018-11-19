@@ -18,7 +18,10 @@
 #recomm_book{width:100%;height:200px;background:pink;}
 div#content{width:1200px;margin:0 auto;}
 #realfooter{width:100%;height:130px;background:#2c2a29;}
-.footer{width: 1200px;margin: 0 auto;color: #a1a1a1}
+.footer{width: 1200px;margin: 0 auto;color: #a1a1a1;font-size: 12px;padding-top: 20px;}
+.footer ul:after{content: "";display: block;clear: both;}
+.footer li{float: left;padding-bottom: 10px;padding-right: 10px;font-weight: bold;}
+.footer p{padding: 3px;padding-left: none;}
 
 
 /* 중간 레이아웃 */
