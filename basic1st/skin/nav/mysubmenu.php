@@ -6,13 +6,17 @@ function display_submenu(num) {
 </script> 
 
 <style TYPE="text/css"> 
-#mysubmenu {margin:0px 0 0 0;} 
-#mysubmenu ul {list-style:none; margin:0; padding:0;} 
+#mysubmenu {margin: 0 auto;text-align: center;} 
+#mysubmenu ul {list-style:none; margin:0 auto; padding:0;} 
 #mysubmenu li { margin: 0; list-style: none;} 
-#mysubmenu .leftmenu_b {line-height:30px; margin-bottom:0px; background-color:#E7EDF1; border-bottom:0.5px solid #dddddd; text-align:center; font-size:15px; font-weight:bold;} 
-#mysubmenu .leftmenu_s {line-height:30px; margin-bottom:0px; padding-left:20px; background-color:#ffffff; border-bottom:0.5px solid #e6e6e6;} 
+#mysubmenu .leftmenu_b {line-height:30px; text-align:center;font-weight:bold;font-size: 34px;margin-top: 50px;margin-bottom: 50px;}
+#mysubmenu .leftmenu_a{padding-bottom: 50px;margin: 0 auto;display: inline-block;}
+#mysubmenu .leftmenu_a:after{content: "";display: block;clear: both;}
+#mysubmenu .leftmenu_s{float: left;width: 240px;height: 50px;text-align: center;line-height: 50px;border: 3px solid #b30317;
+border-right: none;font-weight: bold;color: #b30317;}
+#mysubmenu .leftmenu_s:last-child{border-right: 2px solid #b30317;}
+/*.leftmenu_s:hover{color:white;background: #b30317;}*/
 #mysubmenu a {text-decoration:none; display:block;} 
-#mysubmenu a:hover {color:blue;} 
 </style> 
 
 <script> 
@@ -59,7 +63,7 @@ function display_submenu(num) {
             
             for ($k=0; $row2=sql_fetch_array($result2); $k++) { 
                 if($k == 0) { 
-                    echo '<ul>'.PHP_EOL; 
+                    echo '<ul class="leftmenu_a">'.PHP_EOL; 
                 } 
                 ?> 
                 <li class="leftmenu_s"<?php 
@@ -67,12 +71,12 @@ function display_submenu(num) {
                         $me_link0 = explode("=",$row2['me_link']); 
                         if ( ($me_link0[1]==$board['bo_table'])||($me_link0[1]==$co_id) ) { 
                         //if(strpos($row2['me_link'], $_GET['bo_table']) !== false) { 
-                            echo " style='background-color:#eff3ff;'"; 
+                            echo " style='background-color:#b30317; color:white'"; 
                         } 
                     } else {    
                         if ( ($row2['me_name']==$board['bo_subject'])||($row2['me_name']==$g5['title']) ) { 
                         //if ( strpos($row2['me_link'], $_GET['bo_table']) !== false ) { 
-                            echo " style='background-color:#eff3ff;'"; 
+                            echo " style='background-color:#b30317; color:white'"; 
                         } 
                     } 
                     ?>><a href="<?php echo $row2['me_link']; ?>" target="_<?php echo $row2['me_target']; ?>"><?php echo $row2['me_name']; ?></a> 

@@ -40,7 +40,7 @@ $co_id = "company";
 
 
     <? if(!defined('_INDEX_')) {?>
-    <div id="aside"  style="width:20%;float:left">
+    <div id="aside">
        <!-- SNB // -->
         <?php /* 주의사항 아래 코드를 수정하시면 페이지 현재위치 및 서브메뉴,모바일메뉴가 정상작동되지 않을 수 있습니다. */ ?>
         <ul id="snb">
@@ -103,8 +103,11 @@ $co_id = "company";
 
                 </ul>
         <!-- // SNB -->
-    </div>
+        </div>
     <?}?>
+     
+    </div>
+   
 </div>
 
 <!-- } 콘텐츠 끝 -->

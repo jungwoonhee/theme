@@ -10,11 +10,7 @@
 
 
 
-    <? if(!defined('_INDEX_')) {?>
-    <div id="aside"  style="width:20%;float:left">
-       <?php  include(G5_THEME_PATH.'/skin/nav/mysubmenu.php'); ?> 
-    </div>
-    <?}?>
+    
 </div>
 
 <!-- } 콘텐츠 끝 -->

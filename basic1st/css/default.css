@@ -28,8 +28,10 @@ div#content{width:1200px;margin:0 auto;}
 #wrapper{}
 #container_wr:after {display:block;visibility:hidden;clear:both;content:""}
 #container_wr {z-index:5;margin:0 auto;height:100%;zoom:1}
-#aside {float:right;width:305px;padding:0;background: #e7ebf3;height: 100%;border: 1px solid #adbfd2;margin:20px 0 20px 20px;
-display: block;}
+#aside {padding:0;font-size: 20px;}
+.leftmenu_b{background: #e7e7e7 !important;}
+.leftmenu_b>a{font-size: 34px;background: none;margin-top: 50px;margin-bottom: 50px;}
+.leftmenu_s{float: left;width: 240px;height: 50px;text-align: center;line-height: 50px;border: 2px solid #b30317;}
 
 #container {z-index:4;position:relative;float:left;min-height:500px;height:auto !important;margin:20px  0;height:500px;font-size:1em;width:875px;zoom:1}
 #container:after {display:block;visibility:hidden;clear:both;content:""}

@@ -66,8 +66,8 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 
 <?php    if(defined('_INDEX_')) {     // index에서만 실행?>
 
-    <section id="recomm_book">
-        123
+    <section id="recomm_book" style="display: none">
+        
     </section> 
 
 <?}else{?>
@@ -117,10 +117,16 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
     <?}?>
 
   <div id="content" style="overflow:hidden">
+    <? if(!defined('_INDEX_')) {?>
+        <div id="aside" >
+        <?php  include(G5_THEME_PATH.'/skin/nav/mysubmenu.php'); ?> 
+        </div>
+    <?}?>
+
         <?php 
         if(defined('_INDEX_')) {     // index에서만 실행
         ?>
             <div class="content" style="width:100%;">
         <?}else{?>
-            <div class="content" style="width:75%;float: right;">
+            <div class="content" style="width:100%;margin-bottom: 100px">
         <?}?>
