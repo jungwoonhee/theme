@@ -88,7 +88,7 @@
          </ul>
         </nav>
 
-
+    <? if (defined('_INDEX_')){ ?>
         <div class="side_one">
             <a href="#"><img src="<? echo G5_THEME_IMG_URL ?>/two/side1.png" alt="side"></a>
         </div>
@@ -96,3 +96,5 @@
             <a href="https://play.google.com/store/apps/details?id=com.cj.twosome"><img src="<? echo G5_THEME_IMG_URL ?>/two/google.png" alt="google"></a>
             <a href="https://itunes.apple.com/kr/app/id1225957208?mt=8"><img src="<? echo G5_THEME_IMG_URL ?>/two/apple.png" alt="apple"></a>
         </div>
+    <?}else{?>
+        <?}?>
