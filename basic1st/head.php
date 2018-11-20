@@ -32,6 +32,9 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
     .side_two{position: fixed;z-index: 10;right: 50px;top: 278px;background: url(<? echo G5_THEME_IMG_URL ?>/two/side2.png);width: 146px;height: 97px;}
     .side_two a{line-height: 120px;padding-left: 12px;}
 
+    .tab:after{content: "";display: block;clear: both;}
+    .tab li{float: left;font-size: 24px}
+
 </style>
 <div class="header_bg">
     <header id="header_wrap">
@@ -63,14 +66,26 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 
 <?php    if(defined('_INDEX_')) {     // index에서만 실행?>
 
-    <section id="recomm_book">
-    main selection
+    <section id="recomm_book" style="display: none">
+        
     </section> 
 
 <?}else{?>
 
     <section id="recomm_book">
-    
+        <?if($co_id == "B1" || $co_id == "B2" || $co_id == "B3"){?>
+        <img src="<? echo G5_THEME_IMG_URL ?>/two/sub_bg.png" alt="sub_bg">
+        <?}else if($co_id == "M1" || $co_id == "M2" || $co_id == "M3" || $co_id == "M4" ||$co_id == "M5"){?>
+        <img src="<? echo G5_THEME_IMG_URL ?>/two/notice.jpg" alt="menu_bg">
+        <?}else if($co_id == "C1" || $co_id == "C2"){?>
+        <img src="<? echo G5_THEME_IMG_URL ?>/two/class-title.png" alt="class_bg">
+        <?}else if($bo_table == "free"){?>
+        <img src="<? echo G5_THEME_IMG_URL ?>/two/store.jpg" alt="store">
+        <?}else{?>
+           <img src="<? echo G5_THEME_IMG_URL ?>/two/membership.jpg" alt="membership_bg">
+        <?}?>
+
+
     <!-- 현재위치 -->
     <span style="display:inline-block">
     <?php 
@@ -102,11 +117,17 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 
     <?}?>
 
-    <div id="content" style="overflow:hidden">
+  <div id="content" style="overflow:hidden">
+    <? if(!defined('_INDEX_')) {?>
+        <div id="aside" >
+        <?php  include(G5_THEME_PATH.'/skin/nav/mysubmenu.php'); ?> 
+        </div>
+    <?}?>
+
         <?php 
         if(defined('_INDEX_')) {     // index에서만 실행
         ?>
             <div class="content" style="width:100%;">
         <?}else{?>
-            <div class="content" style="width:75%;float:left">
+            <div class="content" style="width:100%;margin-bottom: 100px">
         <?}?>
