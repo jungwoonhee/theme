@@ -35,11 +35,13 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
     .tab:after{content: "";display: block;clear: both;}
     .tab li{float: left;font-size: 24px}
 
+    .logo{position: relative;z-index: 5}
+
 </style>
 <div class="header_bg">
     <header id="header_wrap">
     
-            <a href="<?php echo G5_URL ?>"><img src="<?echo G5_THEME_IMG_URL?>/two/logo.png" alt="logo"></a>
+            <a href="<?php echo G5_URL ?>"><img src="<?echo G5_THEME_IMG_URL?>/two/logo.png" alt="logo" class="logo"></a>
              
     
             <ul class="gnb">
@@ -118,9 +120,34 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
     <?}?>
 
   <div id="content" style="overflow:hidden">
+    
+
     <? if(!defined('_INDEX_')) {?>
         <div id="aside" >
-        <?php  include(G5_THEME_PATH.'/skin/nav/mysubmenu.php'); ?> 
+        <?//php  include(G5_THEME_PATH.'/skin/nav/mysubmenu.php'); ?> 
+
+<style>
+.active{background: red;}
+</style>
+         <?if($co_id == "B1" || $co_id == "B2" || $co_id == "B3"){?>
+             <ul>
+                <li><a href="<? echo G5_BBS_URL;?>/content.php?co_id=B1"   class="<?if($co_id == "B1"){echo " active";}?>">브랜드이야기</a></li>
+                <li><a href="<? echo G5_BBS_URL;?>/content.php?co_id=B2"   class="<?if($co_id == "B2"){echo " active";}?>">커피이야기</a></li>
+                <li><a href="<? echo G5_BBS_URL;?>/content.php?co_id=B3"   class="<?if($co_id == "B3"){echo " active";}?>">디저트이야기</a></li>
+             </ul>
+        <?}else if($co_id == "M1" || $co_id == "M2" || $co_id == "M3" || $co_id == "M4" ||$co_id == "M5"){?>
+       
+        <?}else if($co_id == "C1" || $co_id == "C2"){?>
+       
+        <?}else if($bo_table == "free"){?>
+        
+        <?}else{?>
+          
+        <?}?>
+
+
+
+
         </div>
     <?}?>
 
